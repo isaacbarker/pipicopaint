@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+    <link rel="icon" href="data:;base64,=">
+    <link href="static/styles.css" rel="stylesheet">
+    <link rel="preload" href="/static/index.js" as="script">
+    <title>PicoPaint</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="title__container">
+                <p class="canvas__title">Pi-Pico Paint</p>
+            </div>
+            <div class="canvas__container">
+                <canvas id="canvas-input" width="512" height="256"></canvas>
+            </div>
+            <div class="btn__container">
+                <div class="btn__row">
+                    <button class="btn" id="invert">
+                        <span class="material-symbols-outlined">invert_colors
+                            <span class="tooltiptext">Invert</span>
+                        </span>
+                    </button>
+                    <button class="btn" id="pen-size-1">
+                        <span class="material-symbols-outlined">pen_size_1
+                            <span class="tooltiptext">Light</span>
+                        </span>
+                    </button>
+                    <button class="btn selected" id="pen-size-2">
+                        <span class="material-symbols-outlined">pen_size_2
+                            <span class="tooltiptext">Mid</span>
+                        </span>
+                    </button>
+                    <button class="btn" id="pen-size-3">
+                        <span class="material-symbols-outlined">pen_size_3
+                            <span class="tooltiptext">Thick</span>
+                        </span>
+                    </button>
+                </div>
+                <div class="btn__row">
+                    <button class="btn" id="clear">
+                        <span class="material-symbols-outlined">cancel
+                            <span class="tooltiptext">Clear</span>
+                        </span>
+                    </button>
+                    <button class="btn" id="print">
+                        <span class="material-symbols-outlined">print
+                            <span class="tooltiptext">Print</span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer__wrapper">
+        <p class="footer__text">Designed by <a class="footer__link" href="https://isaacbarker.net">Isaac Barker</a></p>
+    </footer>
+    <canvas id="canvas-output" width="128" height="64" style="display: none;"></canvas>
+    <script src="static/index.js"></script>
+</body>
+</html>

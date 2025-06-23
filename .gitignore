@@ -1,0 +1,5 @@
+__pycache__
+.vscode
+lib
+.micropico
+config.py
