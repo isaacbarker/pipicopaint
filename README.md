@@ -1,6 +1,8 @@
 ## Pi-PICO PAINT
 
-![Pi-PicoPaint](https://github.com/user-attachments/assets/687c363a-c3ff-4fc4-bead-0ee1e397cdff)
+![PiPicoPaint App](https://github.com/user-attachments/assets/1739e6d0-d445-432c-81d5-23fc827eb704)
+
+![PiPicoPaint Program](https://github.com/user-attachments/assets/37ca8a2a-1ee2-4c73-b3f3-69d2e860b694)
 
 Pi-Pico paint is a physical computing project which implements a web server on a Raspberry Pi Pico 2W and allows users to use a simple paint interface to then show their creations on a sh1106 oled display.
 
