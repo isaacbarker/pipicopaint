@@ -2,10 +2,6 @@ import uasyncio as asyncio
 import os
 from oled import display_pixels
 
-# preload html skeleton to improve response
-with open("./public/index.html", "r") as f:
-    INDEX_HTML = f.read()
-
 async def serve_client(reader: asyncio.StreamReader, writer: asyncio.StreamWriter) -> None:
     # get route and method from request    
     try:
@@ -69,16 +65,8 @@ async def serve_client(reader: asyncio.StreamReader, writer: asyncio.StreamWrite
         Returns base html file for client
         """
 
-        header = (
-            f"HTTP/1.0 200\r\n"
-            f"Content-Type: text/html\r\n"
-            f"Content-Length: {len(INDEX_HTML)}\r\n"
-            f"Connection: close\r\n"
-            "\r\n"
-        )
-        writer.write(header.encode() + INDEX_HTML)
-        await writer.drain()
-        await writer.wait_closed()
+        file_path = "./public/index.html"
+        await respond_file(writer, file_path)
 
     elif method == "GET" and path.startswith("/static"):
 

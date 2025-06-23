@@ -1,8 +1,11 @@
 from machine import Pin, I2C
-from lib.sh1106 import SH1106_I2C
+from sh1106 import SH1106_I2C
 import time
 import framebuf
-from config import DISPLAY_SDA_PIN, DISPLAY_SCL_PIN, DISPLAY_HEIGHT, DISPLAY_WIDTH
+from config import DISPLAY_SDA_PIN, DISPLAY_SCL_PIN
+
+DISPLAY_WIDTH = 128
+DISPLAY_HEIGHT = 64
 
 # initialise I2C panel
 sda = Pin(DISPLAY_SDA_PIN)
